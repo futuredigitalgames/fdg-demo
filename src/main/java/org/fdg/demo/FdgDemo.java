@@ -12,7 +12,7 @@ public class FdgDemo {
      */
     public void getBalance(){
         RpcClient client= FdgInstance.getInstance();
-        BigDecimal amount=client.getBalance("Gs950d02552fCce39B6eF23Bc15081DA6F0ab00132");
+        BigDecimal amount=client.getBalance("0x1e4416ff61a7899225a1e025398d3a63a9352110");
         System.out.println(amount);
     }
 
@@ -35,15 +35,28 @@ public class FdgDemo {
         System.out.println(integer);
     }
 
+
+    /**
+     * eth发送交易
+     */
     public void sendTrade(){
         RpcClient client= FdgInstance.getInstance();
         String tradeHash=client.sendRawTransaction("Gs950d02552fCce39B6eF23Bc15081DA6F0ab00132");
         System.out.println(tradeHash);
     }
 
+    /**
+     *  获取地址交易笔数
+     */
+    public void syncTrade(){
+        RpcClient client= FdgInstance.getInstance();
+        BigInteger count=client.getTradeCount("Gs950d02552fCce39B6eF23Bc15081DA6F0ab00132");
+        System.out.println(count);
+    }
+
     public static void main(String[] args) {
         FdgDemo demo=new FdgDemo();
-        demo.sendTrade();
+        demo.getBlock();
     }
 
 
