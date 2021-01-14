@@ -3,7 +3,7 @@
 
 在pom.xml中引入一下依赖
 
-<dependency>
+        <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.11.0</version>
