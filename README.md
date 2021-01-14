@@ -1,7 +1,7 @@
 # fdg-demo
 
 
-在pom.xml中引入一下依赖
+stay pom.xml Introduce dependency in
 
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
